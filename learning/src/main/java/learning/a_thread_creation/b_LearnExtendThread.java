@@ -1,4 +1,4 @@
-package learning.thread_creation;
+package learning.a_thread_creation;
 
 class Class002 extends Thread{
     // IMPORTANT to understand why we need to override the run()
@@ -8,7 +8,7 @@ class Class002 extends Thread{
     }
 }
 
-public class LearnExtendThread {
+public class b_LearnExtendThread {
     public static void main(String[] args) {
         System.out.println("LearnExtendThread | main | Current thread is: " + Thread.currentThread().getName());
 

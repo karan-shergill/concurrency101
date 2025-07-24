@@ -1,10 +1,10 @@
-package learning.thread_creation;
+package learning.a_thread_creation;
 
 /**
  * Simple Lambda Thread Example
  * Just the basics - no fluff!
  */
-public class SimpleLambdaThread {
+public class c_SimpleLambdaThread {
     
     public static void main(String[] args) {
         

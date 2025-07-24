@@ -1,10 +1,10 @@
-package learning.monitor_lock;
+package learning.c_monitor_lock;
 
 /**
  * Simple Monitor Lock Example
  * Shows WHY we need synchronization
  */
-public class SimpleMonitorLock {
+public class a_SimpleMonitorLock {
     
     // Shared variable that multiple threads will access
     private static int counter = 0;

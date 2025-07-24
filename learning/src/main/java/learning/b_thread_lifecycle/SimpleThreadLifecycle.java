@@ -1,4 +1,4 @@
-package learning.thread_lifecycle;
+package learning.b_thread_lifecycle;
 
 /**
  * Simple Thread Lifecycle Example
@@ -12,7 +12,7 @@ public class SimpleThreadLifecycle {
         Thread myThread = new Thread(() -> {
             try {
                 System.out.println("Thread is running...");
-                Thread.sleep(1000); // Sleep for 1 second
+                Thread.sleep(10000); // Sleep for 1 second
                 System.out.println("Thread finished work");
             } catch (InterruptedException e) {
                 System.out.println("Thread was interrupted");

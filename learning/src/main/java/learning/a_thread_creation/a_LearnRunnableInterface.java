@@ -1,4 +1,4 @@
-package learning.thread_creation;
+package learning.a_thread_creation;
 
 class Class001 implements Runnable{
     @Override
@@ -7,7 +7,7 @@ class Class001 implements Runnable{
     }
 }
 
-public class LearnRunnableInterface {
+public class a_LearnRunnableInterface {
     public static void main(String[] args) {
         System.out.println("LearnRunnableInterface | main | Current thread is: " + Thread.currentThread().getName());
 
