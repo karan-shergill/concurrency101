@@ -1,5 +1,30 @@
 # Thread Creation in Java 🧵
 
+- [Overview](#overview)
+- [Thread Creation Methods](#thread-creation-methods)
+  - [1. Implementing Runnable Interface 🎯](#1-implementing-runnable-interface-)
+  - [2. Extending Thread Class 🔗](#2-extending-thread-class-)
+  - [3. Lambda Expressions (Modern Approach) 🚀](#3-lambda-expressions-modern-approach-)
+- [Visual Concepts](#visual-concepts)
+  - [Thread Creation Concepts Overview](#thread-creation-concepts-overview)
+  - [Detailed Thread Creation Flow](#detailed-thread-creation-flow)
+- [Best Practices 📋](#best-practices-)
+- [Common Patterns](#common-patterns)
+  - [Thread with Return Value](#thread-with-return-value)
+  - [Named Thread with Lambda](#named-thread-with-lambda)
+- [When to Use Each Approach](#when-to-use-each-approach)
+- [Interview Questions & Answers 🎤](#interview-questions--answers-)
+  - [Q1: What's the difference between implementing Runnable and extending Thread?](#q1-whats-the-difference-between-implementing-runnable-and-extending-thread)
+  - [Q2: Why should you call start() instead of run()?](#q2-why-should-you-call-start-instead-of-run)
+  - [Q3: Can you call start() multiple times on the same thread?](#q3-can-you-call-start-multiple-times-on-the-same-thread)
+  - [Q4: What happens if you don't override the run() method in Thread extension?](#q4-what-happens-if-you-dont-override-the-run-method-in-thread-extension)
+  - [Q5: How do lambda expressions work with threads?](#q5-how-do-lambda-expressions-work-with-threads)
+  - [Q6: Which approach is most efficient?](#q6-which-approach-is-most-efficient)
+  - [Q7: Can multiple threads share the same Runnable instance?](#q7-can-multiple-threads-share-the-same-runnable-instance)
+  - [Q8: What's the lifecycle of a thread created with these methods?](#q8-whats-the-lifecycle-of-a-thread-created-with-these-methods)
+  - [Q9: Is there a limit to how many threads you can create?](#q9-is-there-a-limit-to-how-many-threads-you-can-create)
+  - [Q10: When would you choose lambda over Runnable implementation?](#q10-when-would-you-choose-lambda-over-runnable-implementation)
+
 ## Overview
 
 This package demonstrates the three fundamental ways to create threads in Java. Understanding these approaches is crucial for concurrent programming and forms the foundation for more advanced threading concepts.
