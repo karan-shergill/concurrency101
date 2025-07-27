@@ -1,7 +1,6 @@
-package learning.g_future_callable_completableFuture;
+package learning.g_future_callable_completable_future;
 
 import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Demonstrates Future interface in Java Concurrency
