@@ -1,5 +1,38 @@
 # Thread Lifecycle in Java 🔄
 
+- [Overview](#overview)
+- [Thread States (6 States) 📊](#thread-states-6-states-)
+  - [1. NEW 🆕](#1-new-)
+  - [2. RUNNABLE 🏃‍♂️](#2-runnable-)
+  - [3. BLOCKED 🚫](#3-blocked-)
+  - [4. WAITING ⏳](#4-waiting-)
+  - [5. TIMED_WAITING ⏰](#5-timed_waiting-)
+  - [6. TERMINATED ☠️](#6-terminated-)
+- [Code Example Analysis 💻](#code-example-analysis-)
+  - [State Transitions Demonstrated:](#state-transitions-demonstrated)
+- [Visual Thread Lifecycle](#visual-thread-lifecycle)
+- [Complete State Transition Examples 🔄](#complete-state-transition-examples-)
+  - [BLOCKED State Example](#blocked-state-example)
+  - [WAITING State Example](#waiting-state-example)
+- [Thread State Monitoring 📊](#thread-state-monitoring-)
+  - [Using getState() Method](#using-getstate-method)
+  - [State Checking Utility](#state-checking-utility)
+- [Best Practices 📋](#best-practices-)
+- [Common Patterns](#common-patterns)
+  - [Thread State Machine](#thread-state-machine)
+  - [Graceful Thread Shutdown](#graceful-thread-shutdown)
+- [Interview Questions & Answers 🎤](#interview-questions--answers-)
+  - [Q1: What are the 6 thread states in Java?](#q1-what-are-the-6-thread-states-in-java)
+  - [Q2: What's the difference between BLOCKED and WAITING states?](#q2-whats-the-difference-between-blocked-and-waiting-states)
+  - [Q3: Can a thread go directly from NEW to TERMINATED?](#q3-can-a-thread-go-directly-from-new-to-terminated)
+  - [Q4: What happens if you call start() on a TERMINATED thread?](#q4-what-happens-if-you-call-start-on-a-terminated-thread)
+  - [Q5: How can you check if a thread is still alive?](#q5-how-can-you-check-if-a-thread-is-still-alive)
+  - [Q6: What causes a thread to enter TIMED_WAITING state?](#q6-what-causes-a-thread-to-enter-timed_waiting-state)
+  - [Q7: Can you force a thread to change states?](#q7-can-you-force-a-thread-to-change-states)
+  - [Q8: What's the difference between sleep() and wait()?](#q8-whats-the-difference-between-sleep-and-wait)
+  - [Q9: How do you monitor thread states in production?](#q9-how-do-you-monitor-thread-states-in-production)
+  - [Q10: What happens during thread state transitions?](#q10-what-happens-during-thread-state-transitions)
+
 ## Overview
 
 Understanding thread lifecycle is fundamental to concurrent programming in Java. Every thread goes through various states during its execution, and understanding these states helps in debugging, monitoring, and optimizing multithreaded applications.
